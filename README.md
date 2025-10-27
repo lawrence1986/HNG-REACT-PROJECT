@@ -63,7 +63,11 @@ The dev server defaults to http://localhost:5173/.
 ### Switching Between Implementations
 
 - React: this repository.
-- Vue.js / Twig: not yet published. Once ready, links and instructions will appear here.
+- React Live URL: https://ticketingsystem-react.netlify.app/
+- Vue.js: https://github.com/lawrence1986/HNG-VUE-PROJECT
+- Vue Live URL: https://app.netlify.com/projects/ticketingsystem-vue/
+- Twig Repo: https://github.com/lawrence1986/TwigProject
+- Twig Live URL: twigproject-production-e03.up.railway.app
 
 ## Authentication & State
 
