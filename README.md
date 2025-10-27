@@ -77,8 +77,8 @@ The dev server defaults to http://localhost:5173/.
 
 ### Demo Credentials
 
-- Email: `demo@ticketflow.dev`
-- Password: `password123`
+- Email: `test@ticketsystem.build`
+- Password: `LawrenceM`
 
 > Sign-up also works—accounts created via the form persist in `localStorage`.
 
