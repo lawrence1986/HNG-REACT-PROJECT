@@ -68,7 +68,7 @@ The development server defaults runs at http://localhost:5173/ by default.
 | Framework      | Repository                                                         | Live URL                                                                                       |
 | -------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
 | **React**      | *This repository*                                                  | [ticketingsystem-react.netlify.app](https://ticketingsystem-react.netlify.app/)                |
-| **Vue.js**     | [HNG-VUE-PROJECT](https://github.com/lawrence1986/HNG-VUE-PROJECT) | [ticketingsystem-vue](https://app.netlify.com/projects/ticketingsystem-vue/)                   |
+| **Vue.js**     | [HNG-VUE-PROJECT](https://github.com/lawrence1986/HNG-VUE-PROJECT) | [ticketingsystem-vue.netlify.app](https://ticketingsystem-vue.netlify.app/)                   |
 | **Twig (PHP)** | [TwigProject](https://github.com/lawrence1986/TwigProject)         | [twigproject-production-e03.up.railway.app](https://twigproject-production-e03.up.railway.app) |
 
 
@@ -88,30 +88,30 @@ The development server defaults runs at http://localhost:5173/ by default.
 
 ## Accessibility Notes
 
-- Semantic HTML with clear headings, sections, and button elements.
+- Semantic HTML elements with meaningful headings and sections.
 - Form controls are paired with `<Label>` components and inline error messages.
-- Focus states inherit from shadcn/ui, ensuring visible outlines.
-- Decorative elements (wave SVG, circles) are non-interactive and marked with `aria-hidden` where applicable.
-- Status badges combine color with text labels to avoid color-only meaning.
+- Clear focus states inherited from shadcn/ui
+- Decorative elements marked with aria-hidden
+- Status badges include both color and text labels.
 
 Known improvements:
 
 - No skip-link or landmark navigation yet.
-- Toast notifications rely on Sonner's built-in ARIA handling; independent verification is pending.
-
+- Sonner’s ARIA handling not yet independently verified
+- 
 ## Error Handling
 
-- Forms validate required fields and minimum password length before submission.
-- Auth failures (duplicate email, incorrect credentials) surface descriptive toast errors.
-- Ticket dialogs enforce required title/description and restrict status to `open`, `in_progress`, or `closed`.
-- Protected route guard redirects unauthorized users and displays a “Please login” toast.
+- Inline validation for all form inputs
+- Auth errors (duplicate or invalid credentials) surfaced via toast notifications
+- Ticket dialogs enforce required fields and valid status values (open, in_progress, closed)
+- Unauthorized route access triggers redirect and feedback toast
 
 ## Known Issues / TODOs
-
-- Update logout flow to navigate back to `/` per requirement.
+- Keep improving the asthetics and layout - Continum
 - Publish Vue.js and Twig versions, then link them here.
-- Persist tickets via storage or API mock if longer-lived data is desired.
+- Optionally persist tickets with localStorage or a mock API
 
 ## License
 
-Project prepared for the HNG Stage 2 task. No explicit license at this time.
+This project was developed as part of the HNG Stage 2 task for Frontend Dev.
+No explicit license has been defined at this time.
