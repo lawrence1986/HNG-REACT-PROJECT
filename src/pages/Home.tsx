@@ -16,15 +16,13 @@ const Home = () => {
       <section className="relative flex flex-col z-10 p-6 w-full h-full justify-center items-center min-h-[60dvh]">
         {/* Constrain the content width and center it. use mx-auto + max-w for perfect centering */}
         <div className="w-full max-w-2xl px-6 h-full flex flex-col justify-center items-center gap-8">
-          <div className="mx-auto text-center space-y-6 text-sm text-gray-500">
+          <div className="mx-auto text-center space-y-6 text-sm text-black-500">
             <p className="text-2xl font-semibold text-black">
-              Manage Your Tickets with
-              <span className="text-blue-600"> Confidence</span>
+              Confidently in
+              <span className="text-blue-600"> Control</span>
             </p>
             <p className="max-w-prose mx-auto">
-              The modern ticket management system that helps teams stay
-              organized, resolve issues faster, and deliver exceptional support.
-              Get started in seconds.
+              A next-generation ticket management system built for efficiency. Empower your team to stay organized, resolve issues faster, and provide exceptional support every time. Get started in seconds.
             </p>
           </div>
           <div className="flex gap-2">
