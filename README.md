@@ -1,8 +1,9 @@
-# TicketFlow (React Implementation)
+# TicketingSystem (React Implementation)
 
-TicketFlow is a demo ticket management application built with React, TypeScript, and Vite. It delivers the landing page, authentication flow, dashboard, and ticket CRUD experience defined in the multi-framework brief.
+A demo ticket management system built with React, TypeScript, and Vite, providing a smooth experience for managing tickets — including authentication, dashboard overview, and complete CRUD operations.
+This project is part of the multi-framework TicketingSystem suite.
 
-> This repository currently hosts the **React** implementation. Vue.js and Twig ports will live in sibling repositories and be linked here when available.
+
 
 ## Tech Stack
 
@@ -16,62 +17,65 @@ TicketFlow is a demo ticket management application built with React, TypeScript,
 ## Key Features
 
 - Responsive landing page with hero wave SVG, decorative circles, feature boxes, and global footer
-- LocalStorage-backed authentication (login/signup/logout) with inline validation and toast feedback
-- Protected routes enforced by context + router guard
-- Dashboard with ticket stats and recent activity cards
-- Ticket management page with create, read, update, delete workflows
-- Dialog-driven forms with real-time validation and accessible labeling
+- Authentication flow (Login / Signup / Logout) using localStorage
+- Protected routes with context-based access control
+- Dashboard showcasing ticket statistics and recent activities
+- Full CRUD (Create, Read, Update, Delete) for ticket management
+- Dialog-driven forms with inline validation and accessible labeling
 
 ## Project Structure
 
 ```
 src/
   components/
-    context/        Auth and Ticket providers
-    Navbar.tsx      Responsive navigation with session-aware links
-    Footer.tsx      Shared footer
-    TicketCard.tsx  Ticket display card with status chip
-    TicketDialog.tsx CRUD dialog with form validation
-    circle.tsx      Decorative background circle helper
+    context/        → Auth & Ticket providers
+    Navbar.tsx      → Responsive navigation with session-aware links
+    Footer.tsx      → Shared footer component
+    TicketCard.tsx  → Ticket display card with status badge
+    TicketDialog.tsx→ CRUD dialog with form validation
+    circle.tsx      → Decorative background helper
   pages/
-    Home.tsx        Landing page
-    AuthPage.tsx    Login/Signup form (mode toggled)
-    Dashboard.tsx   Overview and quick actions
-    Tickets.tsx     Ticket CRUD screen
-  App.tsx           Routing + providers + protected route wrapper
-  main.tsx          App bootstrap with BrowserRouter
+    Home.tsx        → Landing page
+    AuthPage.tsx    → Login/Signup form (toggle mode)
+    Dashboard.tsx   → Overview with quick actions
+    Tickets.tsx     → Ticket CRUD screen
+  App.tsx           → Routing, providers & protected routes
+  main.tsx          → App bootstrap with BrowserRouter
+
 ```
 
 ## Getting Started
 
-```powershell
-# install dependencies
+```bash
+# Install dependencies
 npm install
 
-# run the development server
+# Start the development server
 npm run dev
 
-# build for production
+# Build for production
 npm run build
 
-# preview the production build
+# Preview the production build
 npm run preview
+
 ```
 
-The dev server defaults to http://localhost:5173/.
+The development server defaults runs at http://localhost:5173/ by default.
 
-### Switching Between Implementations
+### Multi-Framework Implementations
 
-- React: this repository.
-- React Live URL: https://ticketingsystem-react.netlify.app/
-- Vue.js: https://github.com/lawrence1986/HNG-VUE-PROJECT
-- Vue Live URL: https://app.netlify.com/projects/ticketingsystem-vue/
-- Twig Repo: https://github.com/lawrence1986/TwigProject
-- Twig Live URL: twigproject-production-e03.up.railway.app
+| Framework      | Repository                                                         | Live URL                                                                                       |
+| -------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| **React**      | *This repository*                                                  | [ticketingsystem-react.netlify.app](https://ticketingsystem-react.netlify.app/)                |
+| **Vue.js**     | [HNG-VUE-PROJECT](https://github.com/lawrence1986/HNG-VUE-PROJECT) | [ticketingsystem-vue](https://app.netlify.com/projects/ticketingsystem-vue/)                   |
+| **Twig (PHP)** | [TwigProject](https://github.com/lawrence1986/TwigProject)         | [twigproject-production-e03.up.railway.app](https://twigproject-production-e03.up.railway.app) |
+
+
 
 ## Authentication & State
 
-- `AuthContext` stores the active user and registered users in `localStorage` under `ticketapp_user` and `ticketapp_session`.
+- `AuthContext stores`  the active user and registered users in `localStorage` under `ticketapp_user` and `ticketapp_session`.
 - `TicketContext` manages ticket state in memory seeded with mock data. CRUD operations update the context and drive the UI.
 - Protected routes live in `App.tsx`; unauthenticated access triggers a toast and redirect to `/auth/login`.
 
